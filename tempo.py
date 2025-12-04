@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 st.write(''' # Predicción de la temperatura por ciudad ''')
-st.image("cl.jpg", caption="Predicción de la temperatura (Vamos a ver que tal el clima).")
+st.image("cl.jpeg", caption="Predicción de la temperatura (Vamos a ver que tal el clima).")
 
 st.header('Descripción de la actividad')
 
@@ -26,7 +26,7 @@ def user_input_features():
 df = user_input_features()
 
 # Cargar base de datos real
-datos = pd.read_csv('Temp.csv', encoding='latin-1')
+datos = pd.read_csv('temp.csv', encoding='latin-1')
 X = datos.drop(columns='Temperatura')
 y = datos['Temperatura']
 
